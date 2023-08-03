@@ -1,1 +1,2 @@
-# stuz
+# Sifatli ta'lim platformasi 
+yangi
