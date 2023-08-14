@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('word_banks', function (Blueprint $table) {
             $table->id();
+            $table->integer('question_id')->unsigned();
+            $table->integer('number')->unsigned();
+            $table->text('words');
             $table->timestamps();
         });
     }

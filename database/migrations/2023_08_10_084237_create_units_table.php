@@ -13,6 +13,12 @@ return new class extends Migration
     {
         Schema::create('units', function (Blueprint $table) {
             $table->id();
+            $table->string('unit_name');
+            $table->text('unit_description')->nullable();
+            $table->longText('unit_fulltext');
+            $table->integer('course_id')->unsigned();
+            $table->integer('question_amount')->unsigned();
+            $table->integer('tutor_id')->unsigned();
             $table->timestamps();
         });
     }

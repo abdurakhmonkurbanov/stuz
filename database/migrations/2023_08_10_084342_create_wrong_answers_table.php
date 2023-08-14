@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('wrong_answers', function (Blueprint $table) {
             $table->id();
+            $table->integer('question_id')->unsigned();
+            $table->text('wrong_answer');
+            $table->string('wrong_answer_code');
             $table->timestamps();
         });
     }

@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('cash_histories', function (Blueprint $table) {
             $table->id();
+            $table->longText('action');
+            $table->integer('cash');
+            $table->integer('user_id')->unsigned();
             $table->timestamps();
         });
     }

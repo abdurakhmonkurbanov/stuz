@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('subjects', function (Blueprint $table) {
             $table->id();
+            $table->string('subject_name');
+            $table->text('subject_description')->nullable();
+            $table->string('subject_img')->nullable();
             $table->timestamps();
         });
     }

@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('matchings', function (Blueprint $table) {
             $table->id();
+            $table->integer('question_id')->unsigned();
+            $table->text('words');
+            $table->text('matchs');
             $table->timestamps();
         });
     }

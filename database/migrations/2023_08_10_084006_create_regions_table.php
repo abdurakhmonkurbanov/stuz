@@ -13,7 +13,9 @@ return new class extends Migration
     {
         Schema::create('regions', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->string('region_name')->nullable();
+            $table->integer('viloyat_id')->unsigned();
+
         });
     }
 

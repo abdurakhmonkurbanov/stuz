@@ -13,6 +13,12 @@ return new class extends Migration
     {
         Schema::create('questions', function (Blueprint $table) {
             $table->id();
+            $table->text('question');
+            $table->integer('question_type_id')->unsigned();
+            $table->integer('unit_id')->unsigned();
+            $table->integer('modul_id')->unsigned();
+            $table->integer('tutor_id')->unsigned();
+            $table->string('question_code');
             $table->timestamps();
         });
     }

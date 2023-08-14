@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('right_answers', function (Blueprint $table) {
             $table->id();
+            $table->integer('question_id')->unsigned();
+            $table->text('right_answer');
+            $table->string('right_answer_code');
             $table->timestamps();
         });
     }
