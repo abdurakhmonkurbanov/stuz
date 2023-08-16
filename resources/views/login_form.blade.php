@@ -12,9 +12,8 @@
 @endsection
 
 @section('content')
-    @include('includes.index')
+    @include('includes.login_form')
 @endsection
-
 
 @section('footer')
     @include('parts.footer')
