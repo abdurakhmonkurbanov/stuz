@@ -77,8 +77,17 @@
                                                 <i class="flag flag-uz"></i><span
                                                     class="fs-16 ms-2 d-none d-xl-block">UZB</span>
                             </a>
-                            <a href="{{route('login_form')}}" class="avatar avatar-md brround bg-info d-lg-none d-xl-block d-block ">Login
-                            </a>
+                            @if(Session::has('user_type') and Session::get('user_type') != 1 and Session::get('user_type') != 6)
+
+                                <a href="{{route('login_form')}}" class="avatar avatar-md brround bg-info d-lg-none d-xl-block d-block"  data-bs-target="#login-selector"
+                                data-bs-toggle="modal">{{Session::get('logo')}}
+                                </a>
+
+                            @else
+                                <a href="{{route('login_form')}}" class="avatar avatar-md brround bg-info d-lg-none d-xl-block d-block ">Login
+                                </a>
+                            @endif
+
 
                         </div>
                     </div>

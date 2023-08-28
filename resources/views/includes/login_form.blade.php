@@ -13,14 +13,16 @@
                                 <a href="" class="input-group-text bg-white text-muted">
                                     <i class="zmdi zmdi-phone text-muted" aria-hidden="true"></i>
                                 </a>
-                                <input class="input100 border-start-0 form-control ms-0" type="phone" placeholder="Telefon raqam">
+                                <input class="input100 border-start-0 form-control ms-0" type="phone" name="phone" placeholder="Telefon raqam">
+                                <span class="text-danger">@error('phone') {{'Tel nomerni kiriting'}} @enderror</span>
                             </div>
 
                             <div class="wrap-input100 validate-input input-group" id="Password-toggle">
                                 <a href="javascript:void(0)" class="input-group-text bg-white text-muted">
                                     <i class="zmdi zmdi-eye text-muted" aria-hidden="true"></i>
                                 </a>
-                                <input class="input100 border-start-0 form-control ms-0" type="password" placeholder="Parol">
+                                <input class="input100 border-start-0 form-control ms-0" type="password" name="password" placeholder="Parol">
+                                <span class="text-danger">@error('password') {{'Parolni kiriting'}} @enderror</span>
                             </div>
                             <div class="text-end pt-2">
                                 <p class="mb-0"><a href="forgot-password.html" class="text-primary ms-1">Parolni tiklash</a></p>

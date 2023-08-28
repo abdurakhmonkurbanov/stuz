@@ -18,7 +18,30 @@ class UserController extends Controller
 
     public function login(Request $request){
 
-        return redirect(route('index'))->with('xabar','Siz ro`yxatdan o`tdingiz');
+
+        $request->validate([
+            'phone' => 'required',
+            'password' => 'required'
+        ]);
+        $user = User::where('phone','=',$request->phone)->first();
+        if ($user){
+            if (Hash::check($request->password, $user->password)){
+                $request->session()->put('loginId',$user->id);
+                $fio = $user->lastname." ".$user->firstname;
+                $logo = $user->lastname[0]." ".$user->firstname[0];
+                $request->session()->put('fio',$fio);
+                $request->session()->put('logo',$logo);
+                $request->session()->put('user_type',$user->user_type_id);
+                return redirect(route('index'))->with('xabar','Hurmatli '.$fio.' <br> Hush kelibsiz!');
+            }
+            else{
+                return back()->with('xato','Parol xato!!!');
+            }
+           }
+        else{
+                return back()->with('xato','Login xato!!!');
+            }
+
     }
 
     public function reg_form()
@@ -54,8 +77,12 @@ class UserController extends Controller
         $res = $user->save();
         if ($res){
             $request->session()->put('loginId',$user->id);
-            $request->session()->put('fio',$user->lastname." ".$user->firstname);
-            $request->session()->put('user_type',$user->type);
+            $fio = $user->lastname." ".$user->firstname;
+            $logo = $user->lastname[0]." ".$user->firstname[0];
+
+            $request->session()->put('fio',$fio);
+            $request->session()->put('logo',$logo);
+            $request->session()->put('user_type',$user->user_type_id);
             return redirect(route('index'))->with('xabar','Siz ro`yxatdan o`tdingiz');
         }
         else{
@@ -67,6 +94,10 @@ class UserController extends Controller
         }
     }
 
+    public function logout(){
+        session()->flush();
+        return redirect(route('index'));
+    }
 
     public function create()
     {

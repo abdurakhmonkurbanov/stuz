@@ -21,6 +21,7 @@ Route::get('/',[PageController::class,'index'])->name('index');
 ////  Login Registration
 Route::get('login',[UserController::class,'login_form'])->name('login_form');
 Route::post('login',[UserController::class,'login'])->name('login');
+Route::get('logout',[UserController::class,'logout'])->name('logout');
 
 Route::get('registration',[UserController::class,'reg_form'])->name('reg_form');
 Route::post('registration',[UserController::class,'registration'])->name('registration');

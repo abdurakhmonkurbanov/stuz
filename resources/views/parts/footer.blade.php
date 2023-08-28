@@ -26,6 +26,34 @@
 </div>
 <!-- Country-selector modal-->
 
+ <!-- User form-selector modal-->
+ <div class="modal fade" id="login-selector">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content country-select-modal">
+            <div class="modal-header">
+                <h6 class="modal-title">Foydalanuvchi haqida</h6><button aria-label="Close" class="btn-close"
+                    data-bs-dismiss="modal" type="button"><span aria-hidden="true">×</span></button>
+            </div>
+            <div class="modal-body">
+                <ul class="row p-3">
+                    <li class="col-lg-6 mb-2">
+                        <a class="dropdown-item" href="profile.html">
+                            <i class="dropdown-icon fe fe-user"></i> Profile
+                        </a>
+                    </li>
+                    <li class="col-lg-6 mb-2">
+                        <a href="{{route('logout')}}" class="dropdown-item" href="login.html">
+                            <i class="dropdown-icon fe fe-alert-circle"></i> Chiqish
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Country-selector modal-->
+
  <!-- FOOTER OPEN -->
  <div class="demo-footer">
     <div class="container">
