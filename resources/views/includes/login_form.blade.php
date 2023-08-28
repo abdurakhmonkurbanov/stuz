@@ -9,11 +9,11 @@
                 <div class="panel-body tabs-menu-body">
                     <div class="tab-content">
                         <div class="tab-pane active" id="tab5">
-                            <div class="wrap-input100 validate-input input-group" data-bs-validate="Valid email is required: ex@abc.xyz">
-                                <a href="javascript:void(0)" class="input-group-text bg-white text-muted">
+                            <div class="wrap-input100 validate-input input-group">
+                                <a href="" class="input-group-text bg-white text-muted">
                                     <i class="zmdi zmdi-phone text-muted" aria-hidden="true"></i>
                                 </a>
-                                <input class="input100 border-start-0 form-control ms-0" type="email" placeholder="Telefon raqam">
+                                <input class="input100 border-start-0 form-control ms-0" type="phone" placeholder="Telefon raqam">
                             </div>
 
                             <div class="wrap-input100 validate-input input-group" id="Password-toggle">

@@ -4,8 +4,12 @@
     <div class="section pb-0">
         <div class="container">
             <div class="row">
-                <h2 class="text-center fw-semibold">Foydalanuvchilarimiz</h2>
-                <span class="landing-title"></span>
+                <h2 class="text-center fw-semibold">Foydalanuvchilarimiz
+
+                    </h2>
+                <span class="landing-title">
+
+                </span>
 
             </div>
             <div class="row text-center services-statistics landing-statistics">
