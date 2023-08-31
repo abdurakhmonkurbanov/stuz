@@ -19,14 +19,14 @@
                             <div class="counter-status">
                                 <div
                                     class="counter-icon bg-primary-transparent box-shadow-primary">
-                                    <i class="fe fe-layers text-primary fs-23"></i>
+                                    <i class="fa fa-institution text-primary fs-23"></i>
                                 </div>
                                 <div class="test-body text-center">
                                     <h1 class=" mb-0">
-                                        <span class="counter fw-semibold counter ">100</span>+
+                                        <span class="counter fw-semibold counter ">34</span>+
                                     </h1>
                                     <div class="counter-text">
-                                        <h5 class="font-weight-normal mb-0 ">HTML Pages</h5>
+                                        <h5 class="font-weight-normal mb-0 ">Maktablar</h5>
                                     </div>
                                 </div>
                             </div>
@@ -39,14 +39,14 @@
                             <div class="counter-status">
                                 <div
                                     class="counter-icon bg-secondary-transparent box-shadow-secondary">
-                                    <i class="fe fe-wind text-secondary fs-23"></i>
+                                    <i class="fa fa-graduation-cap text-secondary fs-23"></i>
                                 </div>
                                 <div class="text-body text-center">
                                     <h1 class=" mb-0">
-                                        <span class="counter fw-semibold counter ">60</span>+
+                                        <span class="counter fw-semibold counter ">12890</span>+
                                     </h1>
                                     <div class="counter-text">
-                                        <h5 class="font-weight-normal mb-0 ">Integrated Plugins
+                                        <h5 class="font-weight-normal mb-0 ">O'qituvchilar
                                         </h5>
                                     </div>
                                 </div>
@@ -60,14 +60,14 @@
                             <div class="counter-status">
                                 <div
                                     class="counter-icon bg-success-transparent box-shadow-success">
-                                    <i class="fe fe-file-text text-success fs-23"></i>
+                                    <i class="fe fe-users text-success"></i>
                                 </div>
                                 <div class="text-body text-center">
                                     <h1 class=" mb-0">
-                                        <span class="counter fw-semibold counter ">10</span>+
+                                        <span class="counter fw-semibold counter ">155146</span>+
                                     </h1>
                                     <div class="counter-text">
-                                        <h5 class="font-weight-normal mb-0 ">Form Elements</h5>
+                                        <h5 class="font-weight-normal mb-0 ">O'quvchilar</h5>
                                     </div>
                                 </div>
                             </div>
@@ -80,14 +80,14 @@
                             <div class="counter-status">
                                 <div
                                     class="counter-icon bg-danger-transparent box-shadow-danger">
-                                    <i class="fe fe-grid text-danger fs-23"></i>
+                                    <i class="fe fe-user-check text-danger fs-23"></i>
                                 </div>
                                 <div class="text-body text-center">
                                     <h1 class=" mb-0">
-                                        <span class="counter fw-semibold counter ">30</span>+
+                                        <span class="counter fw-semibold counter ">188456</span>+
                                     </h1>
                                     <div class="counter-text">
-                                        <h5 class="font-weight-normal mb-0 ">Customize Widgets
+                                        <h5 class="font-weight-normal mb-0 ">Faol foydalanuvchilar
                                         </h5>
                                     </div>
                                 </div>
@@ -439,38 +439,14 @@
                             <div class="row justify-content-center">
                                 <div class="col-lg-12 px-0">
                                     <div class="feature-logos mt-5">
+                                        @foreach ($subjects as $subject)
                                         <div class="slide">
-                                            <img src="/assets/images/landing/web/1.png">
-                                            <h5 class="mt-3 text-white">Bootstrap5</h5>
+                                            <img src="/assets/images/subjects/{{$subject->subject_img}}">
+                                            <h5 class="mt-3 text-white">{{$subject->subject_name}} </h5>
                                         </div>
-                                        <div class="slide">
-                                            <img src="/assets/images/landing/web/2.png">
-                                            <h5 class="mt-3 text-white">HTML5</h5>
-                                        </div>
-                                        <div class="slide">
-                                            <img src="/assets/images/landing/web/3.png">
-                                            <h5 class="mt-3 text-white">JQuery</h5>
-                                        </div>
-                                        <div class="slide">
-                                            <img src="/assets/images/landing/web/4.png">
-                                            <h5 class="mt-3 text-white">Sass</h5>
-                                        </div>
-                                        <div class="slide">
-                                            <img src="/assets/images/landing/web/5.png">
-                                            <h5 class="mt-3 text-white">Gulp</h5>
-                                        </div>
-                                        <div class="slide">
-                                            <img src="/assets/images/landing/web/6.png">
-                                            <h5 class="mt-3 text-white">NPM</h5>
-                                        </div>
-                                        <div class="slide">
-                                            <img src="/assets/images/landing/web/1.png">
-                                            <h5 class="mt-3 text-white">Bootstrap5</h5>
-                                        </div>
-                                        <div class="slide">
-                                            <img src="/assets/images/landing/web/2.png">
-                                            <h5 class="mt-3 text-white">HTML5</h5>
-                                        </div>
+
+                                        @endforeach
+
                                     </div>
                                 </div>
                             </div>
@@ -797,127 +773,90 @@
                         <div class="card-body pt-5">
                             <h2 class="text-center fw-semibold text-white-80">Hamkorlarimiz </h2>
                             <span class="landing-title"></span>
-                            <
                             <div class="testimonial-carousel">
                                 <div class="slide text-center">
                                     <div class="row">
-                                        <div class="col-xl-8 col-md-12 d-block mx-auto">
-                                            <div class="testimonia">
-                                                <p class="text-white-80">
-                                                    <i
-                                                        class="fa fa-quote-left fs-20 text-white-80"></i>
-                                                    Lorem ipsum dolor sit amet,
-                                                    consectetur adipisicing elit. Quod eos id
-                                                    officiis hic tenetur quae quaerat
-                                                    ad velit ab. Lorem ipsum dolor sit amet,
-                                                    consectetur adipisicing elit.
-                                                    Dolore cum accusamus eveniet molestias
-                                                    voluptatum inventore laboriosam
-                                                    labore sit, aspernatur praesentium iste
-                                                    impedit quidem dolor veniam.
-                                                </p>
-                                                <h3 class="title">Elizabeth</h3>
-                                                <span class="post">Web Developer</span>
-                                                <div class="rating-stars block my-rating-5 mb-5"
-                                                    data-rating="4"></div>
-                                                <div class="owl-controls clickable">
-                                                    <div class="owl-pagination">
-                                                        <div class="owl-page active">
-                                                            <span class=""></span>
-                                                        </div>
-                                                        <div class="owl-page ">
-                                                            <span class=""></span>
-                                                        </div>
-                                                        <div class="owl-page">
-                                                            <span class=""></span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                        <div class="col">
+                                                   <a href="https://edu.uz/" target="_blank">
+                                                    <img src="/assets/images/partners/uzedu.png" style="width: 100%; height:100%"/>
+                                                </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="slide text-center">
+                                    <div class="row">
+                                        <div class="col">
+                                            <a href="https://avloniy.uz/" target="_blank">
+                                             <img src="/assets/images/partners/avloniy.png" style="width: 100%; height:100%"/>
+                                         </a>
+                                 </div>
+                                    </div>
+                                </div>
+                                <div class="slide text-center">
+                                    <div class="row">
+                                        <div class="col">
+                                            <a href="https://dr.rtm.uz/" target="_blank">
+                                             <img src="/assets/images/partners/rtm.png" style="width: 100%; height:100%"/>
+                                         </a>
+                                 </div>
+                                    </div>
+                                </div>
+                                <div class="slide text-center">
+                                    <div class="row">
+                                        <div class="col">
+                                            <a href="https://sirdarya.uzedu.uz/" target="_blank">
+                                             <img src="/assets/images/partners/sirdaryo.png" style="width: 100%; height:100%"/>
+                                         </a>
+                                 </div>
+                                    </div>
+                                </div>
+                                <div class="slide text-center">
+                                    <div class="row">
+                                        <div class="col">
+                                            <a href="https://aiyonet.uz/" target="_blank">
+                                             <img src="/assets/images/partners/ziyonet.png" style="width: 100%; height:100%"/>
+                                         </a>
+                                 </div>
+                                    </div>
+                                </div>
+                                <div class="slide text-center">
+                                    <div class="row">
+                                        <div class="col">
+                                            <a href="https://khiso.uz/" target="_blank">
+                                             <img src="/assets/images/partners/khiso.png" style="width: 100%; height:100%"/>
+                                         </a>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="slide text-center">
                                     <div class="row">
-                                        <div class="col-xl-8 col-md-12 d-block mx-auto">
-                                            <div class="testimonia">
-                                                <p class="text-white-80"><i
-                                                        class="fa fa-quote-left fs-20"></i> Nemo
-                                                    enim ipsam
-                                                    voluptatem quia voluptas sit aspernatur aut
-                                                    odit aut fugit, sed quia
-                                                    consequuntur magni dolores eos qui ratione
-                                                    voluptatem sequi nesciunt. Neque
-                                                    porro quisquam est, qui dolorem ipsum quia
-                                                    dolor sit amet, consectetur,
-                                                    adipisci velit, sed quia non numquam eius
-                                                    modi tempora incidunt ut labore.
-                                                </p>
-                                                <div class="testimonia-data">
-                                                    <h3 class="title">williamson</h3>
-                                                    <span class="post">Web Developer</span>
-                                                    <div class="rating-stars">
-                                                        <div class="rating-stars block my-rating-5 mb-5"
-                                                            data-rating="5"></div>
-                                                        <div class="owl-controls clickable">
-                                                            <div class="owl-pagination">
-                                                                <div class="owl-page ">
-                                                                    <span class=""></span>
-                                                                </div>
-                                                                <div class="owl-page active">
-                                                                    <span class=""></span>
-                                                                </div>
-                                                                <div class="owl-page">
-                                                                    <span class=""></span>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                        <div class="col">
+                                            <a href="https://talim.uz/" target="_blank">
+                                             <img src="/assets/images/partners/talim.png" style="width: 100%; height:100%"/>
+                                         </a>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="slide text-center">
                                     <div class="row">
-                                        <div class="col-xl-8 col-md-12 d-block mx-auto">
-                                            <div class="testimonia">
-                                                <p class="text-white-80"><i
-                                                        class="fa fa-quote-left fs-20"></i> Duis
-                                                    aute irure dolor
-                                                    in reprehenderit in voluptate velit esse
-                                                    cillum dolore eu fugiat nulla
-                                                    pariatur. Excepteur sint occaecat cupidatat
-                                                    non proident, sunt in culpa qui
-                                                    officia deserunt mollit anim id est laborum.
-                                                    Sed ut perspiciatis unde omnis
-                                                    iste natus error sit voluptatem accusantium
-                                                    doloremque laudantium.</p>
-                                                <div class="testimonia-data">
-                                                    <h3 class="title">Sophie Carr</h3>
-                                                    <span class="post">Web Developer</span>
-                                                    <div class="rating-stars">
-                                                        <div class="rating-stars block my-rating-5 mb-5"
-                                                            data-rating="5"></div>
-                                                        <div class="owl-controls clickable">
-                                                            <div class="owl-pagination">
-                                                                <div class="owl-page ">
-                                                                    <span class=""></span>
-                                                                </div>
-                                                                <div class="owl-page">
-                                                                    <span class=""></span>
-                                                                </div>
-                                                                <div class="owl-page active">
-                                                                    <span class=""></span>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                        <div class="col">
+                                            <a href="https://oliymaktabakademiyasi.uz/" target="_blank">
+                                             <img src="/assets/images/partners/oliy_maktab.png" style="width: 100%; height:100%"/>
+                                         </a>
                                         </div>
                                     </div>
                                 </div>
+                                <div class="slide text-center">
+                                    <div class="row">
+                                        <div class="col">
+                                            <a href="https://e-adabiyot.uz/" target="_blank">
+                                             <img src="/assets/images/partners/e_adabiyot.png" style="width: 100%; height:100%"/>
+                                         </a>
+                                        </div>
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
                     </div>

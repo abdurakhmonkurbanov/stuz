@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AdressController;
+use App\Http\Controllers\CourseController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,6 +18,7 @@ use App\Http\Controllers\AdressController;
 
 
 Route::get('/',[PageController::class,'index'])->name('index');
+Route::resource('/courses', CourseController::class);
 
 ////  Login Registration
 Route::get('login',[UserController::class,'login_form'])->name('login_form');

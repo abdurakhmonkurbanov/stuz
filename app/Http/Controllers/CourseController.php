@@ -4,15 +4,14 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class PageController extends Controller
+class CourseController extends Controller
 {
-
+    /**
+     * Display a listing of the resource.
+     */
     public function index()
     {
-
-        return view('index',[
-            'subjects' => $this->subjects
-        ]);
+        return view('courses');
     }
 
     /**

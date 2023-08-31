@@ -35,11 +35,11 @@ class UserController extends Controller
                 return redirect(route('index'))->with('xabar','Hurmatli '.$fio.' <br> Hush kelibsiz!');
             }
             else{
-                return back()->with('xato','Parol xato!!!');
+                return back()->with('xabar','Parol xato!!!');
             }
            }
         else{
-                return back()->with('xato','Login xato!!!');
+                return back()->with('xabar','Login xato!!!');
             }
 
     }

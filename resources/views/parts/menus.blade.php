@@ -48,24 +48,24 @@
                         </a>
 
                         <ul class="side-menu">
-                            <li class="slide">
-                                <a class="side-menu__item active" data-bs-toggle="slide" href="#home"><span
-                                        class="side-menu__label">On-line maktab</span></a>
+                            <li>
+                                <a class="fw-semibold text-dark" href="{{route('courses.index')}}"><span
+                                    class="side-menu__label">On-line maktab</span></a>
+                            </li>
+                            <li>
+                                <a class="fw-semibold text-dark" href="https://youtu.be/yzCJwpJrmb4" ><span
+                                    class="side-menu__label">E-Kutibxona</span></a>
                             </li>
                             <li class="slide">
-                                <a class="side-menu__item" data-bs-toggle="slide" href="#Features"><span
-                                        class="side-menu__label">E-Kutibxona</span></a>
+                                <a class="fw-semibold text-dark"  href="#About"><span
+                                    class="side-menu__label">Online olimpiada</span></a>
                             </li>
                             <li class="slide">
-                                <a class="side-menu__item" data-bs-toggle="slide" href="#About"><span
-                                        class="side-menu__label">Online olimpiada</span></a>
-                            </li>
-                            <li class="slide">
-                                <a class="side-menu__item" data-bs-toggle="slide" href="#Faqs"><span
+                                <a class="fw-semibold text-dark"  data-bs-toggle="slide" href="#Faqs"><span
                                         class="side-menu__label">OTMga tayyorlash</span></a>
                             </li>
                             <li class="slide">
-                                <a class="side-menu__item" data-bs-toggle="slide" href="#Blog"><span
+                                <a class="fw-semibold text-dark" data-bs-toggle="slide" href="#Blog"><span
                                         class="side-menu__label">Nazorat savollari</span></a>
                             </li>
 
@@ -77,12 +77,10 @@
                                                 <i class="flag flag-uz"></i><span
                                                     class="fs-16 ms-2 d-none d-xl-block">UZB</span>
                             </a>
-                            @if(Session::has('user_type') and Session::get('user_type') != 1 and Session::get('user_type') != 6)
-
+                            @if(Session::has('user_type'))
                                 <a href="{{route('login_form')}}" class="avatar avatar-md brround bg-info d-lg-none d-xl-block d-block"  data-bs-target="#login-selector"
                                 data-bs-toggle="modal">{{Session::get('logo')}}
                                 </a>
-
                             @else
                                 <a href="{{route('login_form')}}" class="avatar avatar-md brround bg-info d-lg-none d-xl-block d-block ">Login
                                 </a>
