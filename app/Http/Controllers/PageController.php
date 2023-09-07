@@ -7,6 +7,11 @@ use Illuminate\Http\Request;
 class PageController extends Controller
 {
 
+    public function subjects(){
+        return view('subjects',[
+            'subjects' => $this->subjects
+        ]);
+    }
     public function index()
     {
 

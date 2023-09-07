@@ -24,11 +24,12 @@ class UserController extends Controller
             'password' => 'required'
         ]);
         $user = User::where('phone','=',$request->phone)->first();
+
         if ($user){
             if (Hash::check($request->password, $user->password)){
-                $request->session()->put('loginId',$user->id);
                 $fio = $user->lastname." ".$user->firstname;
                 $logo = $user->lastname[0]." ".$user->firstname[0];
+                $request->session()->put('user_id',$user->id);
                 $request->session()->put('fio',$fio);
                 $request->session()->put('logo',$logo);
                 $request->session()->put('user_type',$user->user_type_id);
@@ -75,11 +76,13 @@ class UserController extends Controller
         $user->user_type_id = $request->user_type;
 
         $res = $user->save();
+        $user_id = $user->id;
+
         if ($res){
-            $request->session()->put('loginId',$user->id);
             $fio = $user->lastname." ".$user->firstname;
             $logo = $user->lastname[0]." ".$user->firstname[0];
 
+            $request->session()->put('user_id',$user_id);
             $request->session()->put('fio',$fio);
             $request->session()->put('logo',$logo);
             $request->session()->put('user_type',$user->user_type_id);

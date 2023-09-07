@@ -49,11 +49,11 @@
 
                         <ul class="side-menu">
                             <li>
-                                <a class="fw-semibold text-dark" href="{{route('courses.index')}}"><span
+                                <a class="fw-semibold text-dark" href="{{route('subjects')}}"><span
                                     class="side-menu__label">On-line maktab</span></a>
                             </li>
                             <li>
-                                <a class="fw-semibold text-dark" href="https://youtu.be/yzCJwpJrmb4" ><span
+                                <a class="fw-semibold text-dark" href="#" ><span
                                     class="side-menu__label">E-Kutibxona</span></a>
                             </li>
                             <li class="slide">

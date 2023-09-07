@@ -18,6 +18,8 @@ use App\Http\Controllers\CourseController;
 
 
 Route::get('/',[PageController::class,'index'])->name('index');
+Route::get('/subjects',[PageController::class,'subjects'])->name('subjects');
+
 Route::resource('/courses', CourseController::class);
 
 ////  Login Registration

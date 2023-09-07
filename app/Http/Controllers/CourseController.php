@@ -3,6 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\subject;
+use App\Models\course;
+use App\Models\modul;
+
 
 class CourseController extends Controller
 {
@@ -11,7 +15,7 @@ class CourseController extends Controller
      */
     public function index()
     {
-        return view('courses');
+
     }
 
     /**
@@ -27,7 +31,33 @@ class CourseController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        if($request->session()->has('user_type') and ($request->session()->get('user_type') == 1 or $request->session()->get('user_type') == 6 )){
+            $request->validate([
+            'newcourse' => 'required',
+            'subject_id' => 'required'
+            ]);
+            $tutor_id  = $request->session()->get('user_id');
+            $course = New course;
+            $course->subject_id = $request->subject_id;
+            $course->course_name = $request->newcourse;
+            $course->tutor_id = $tutor_id;
+            $res = $course->save();
+                if($res){
+                    return back()->with(
+                        ['xabar'=>'Yangi kurs qo`shildi', ]
+                    );
+                }
+                else{
+                    return back()->with(
+                        [ 'xabar'=>'Xato! Yangi kurs qo`shilmadi', ]
+                    );
+                }
+        }
+        else{
+            return redirect(route('index'))->with('xabar','Siz tutor emassiz');
+        }
+
     }
 
     /**
@@ -35,7 +65,14 @@ class CourseController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $subject = subject::where('id','=',$id)->get();
+
+        $courses = course::where('subject_id','=',$id)->get();
+
+        return view('courses',[
+            'subject' => $subject[0],
+            'courses' => $courses
+        ]);
     }
 
     /**
